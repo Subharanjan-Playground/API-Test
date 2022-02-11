@@ -24,4 +24,4 @@ jobs:
       run: shopt -s globstar; for f in ./**/*.csproj; do dotnet restore $f  ; done
     - name: Build
       shell: bash
-      run: shopt -s globstar; for f in ./**/*.csproj; do dotnet build $f --configuration ${{ env.BuildConfiguration }} ; done
+      run: shopt -s globstar; for f in ./**/*.csproj; do dotnet build $f --configuration ${{ env.BUILDCONFIGURATION }} ; done
