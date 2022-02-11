@@ -4,10 +4,10 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/"
     schedule:
       interval: "daily"
     reviewers:
-      - "Subharanjan2055"
+      - "jayesh-talreja"
     assignees:
       - "jayesh-talreja"
