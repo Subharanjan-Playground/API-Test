@@ -20,6 +20,8 @@ jobs:
       run: npm install
       working-directory: TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp
     - name: Restore
-      run: dotnet restore $(BuildParameters.RestoreBuildProjects)
+      shell: bash
+      run: shopt -s globstar; for f in ./**/*.csproj; do dotnet restore $f  ; done
     - name: Build
-      run: dotnet build $(BuildParameters.RestoreBuildProjects) --configuration ${{ env.BuildConfiguration }}
+      shell: bash
+      run: shopt -s globstar; for f in ./**/*.csproj; do dotnet build $f --configuration ${{ env.BuildConfiguration }} ; done
