@@ -1,0 +1,13 @@
+# dependabot.yml file with
+# reviews and an assignee for all npm pull requests
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    reviewers:
+      - "Subharanjan2055"
+    assignees:
+      - "jayesh-talreja"
