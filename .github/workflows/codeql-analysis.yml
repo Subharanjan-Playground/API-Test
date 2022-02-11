@@ -18,7 +18,7 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ main ]
   schedule:
-    - cron: '29 1 * * 1'
+    - cron: '24 18 * * 2'
 
 jobs:
   analyze:
@@ -39,6 +39,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
@@ -52,8 +53,19 @@ jobs:
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v1
+   # - name: Autobuild
+    #  uses: github/codeql-action/autobuild@v1
+    
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+       
+    - name: Install dependencies
+      run: dotnet restore
+      working-directory: TailwindTraders.Website/Source/Tailwind.Traders.Web/
+    - name: Build
+      run: dotnet build TailwindTraders.Website/Source/Tailwind.Traders.Web.sln --configuration Release --no-restore
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
