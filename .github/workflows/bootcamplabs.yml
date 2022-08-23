@@ -1,0 +1,27 @@
+name: BootcampLabs/BootcampLabs
+on:
+  push:
+    branches:
+    - "*"
+env:
+  BUILDCONFIGURATION: Release
+  BUILDPARAMETERS.RESTOREBUILDPROJECTS: "**/*.csproj"
+jobs:
+  Job_1:
+    name: Agent job 1
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node 10.16.3
+      uses: actions/setup-node@v2
+      with:
+        node-version: 10.16.3
+    - name: npm install
+      run: npm install
+      working-directory: TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp
+    - name: Restore
+      shell: bash
+      run: shopt -s globstar; for f in ./**/*.csproj; do dotnet restore $f  ; done
+    - name: Build
+      shell: bash
+      run: shopt -s globstar; for f in ./**/*.csproj; do dotnet build $f --configuration ${{ env.BUILDCONFIGURATION }} ; done

@@ -1,0 +1,13 @@
+# dependabot.yml file with
+# reviews and an assignee for all npm pull requests
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/"
+    schedule:
+      interval: "daily"
+    reviewers:
+      - "jayesh-talreja"
+    assignees:
+      - "jayesh-talreja"
