@@ -804,6 +804,7 @@ msRestNodeAuth
 
       console.log(chalk.white(JSON.stringify(profile, null, 2)));
       console.log(chalk.white(JSON.stringify(profile, null, 3)));
+      console.log(chalk.white(JSON.stringify(profile, null, 4)));
 
       console.log('');
     }
