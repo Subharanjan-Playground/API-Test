@@ -93,7 +93,8 @@ jobs:
         done
         echo "Zipping database"
         DATABASE_ZIP="netgoat-$LANGUAGE-db.zip"
-        zip -r "$DATABASE_ZIP" "$DATABASE_DIR"
+        
+        zip -r netgoat-javascript-db.zip . -i /home/runner/work/attendee-subharanjan2055/results/javascript
         echo "::set-output name=zip::$DATABASE_ZIP"
     - name: Extract CSV from SARIF
       uses: mr-sherman/sarif-to-csv@v2
