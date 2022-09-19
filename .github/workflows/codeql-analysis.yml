@@ -89,7 +89,7 @@ jobs:
     - uses: zbazztian/ghas-reports-action@v3.6
       with:
           token: ${{ secrets.ATOKEN }}
-          repo: 'dsp-testing/ghas-intro-6'
+          repo: 'Microsoft-Bootcamp/attendee-subharanjan2055'
           # optionally define repo (default is calling repo)
 
     - uses: actions/upload-artifact@v3.0.0
