@@ -95,5 +95,5 @@ jobs:
     - uses: actions/upload-artifact@v3.0.0
       with:
           name: results
-          path: /home/runner/work/attendee-subharanjan2055/results/alerts.xlsx      
+          path: alerts.xlsx     
    
