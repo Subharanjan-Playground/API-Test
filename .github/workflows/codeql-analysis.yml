@@ -87,9 +87,7 @@ jobs:
       with:
           path: data/stats.csv
           columns: Column 1, Column 2, etc
-          "Column 1": 1
-          "Column 2": 2
-          etc: 3
+
 
  
 
