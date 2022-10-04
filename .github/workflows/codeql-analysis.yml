@@ -82,7 +82,7 @@ jobs:
       uses: github/codeql-action/analyze@v1
       
     - name: CSV export
-      uses: some-natalie/ghas-to-csv@v2
+      uses: Subharanjan-Canaryss/ghas-to-csv@main
       env:
           GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
           SCOPE_NAME: "Microsoft-Bootcamp/attendee-subharanjan2055"
