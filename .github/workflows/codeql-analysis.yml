@@ -85,7 +85,7 @@ jobs:
       uses: actions/checkout@v2
     - uses: gr2m/write-csv-file-action@v1.x
       with:
-          path: /home/runner/work/attendee-subharanjan2055/results/csharp.csv
+          path: data/stats.csv
 
 
  
