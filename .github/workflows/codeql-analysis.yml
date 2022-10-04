@@ -84,16 +84,9 @@ jobs:
     - name: CSV export
       uses: some-natalie/ghas-to-csv@v2
       env:
-          GITHUB_PAT: ${{ secrets.ATOKEN }}  # you need to set a PAT
+          GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
           SCOPE_NAME: "Microsoft-Bootcamp/attendee-subharanjan2055"
-    - name: Upload CSV
-      uses: actions/upload-artifact@v3
-      with:
-          name: ghas-data
-          path: ${{ github.workspace }}/*.csv
-          # path: ${{ github.workspace }}/*.csv
-          if-no-files-found: error
-
+ 
 
  
 
