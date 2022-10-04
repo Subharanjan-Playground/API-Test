@@ -81,11 +81,16 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
       
-    - name: checkout main branch
-      uses: actions/checkout@v2
-    - uses: gr2m/write-csv-file-action@v1.x
+    - name: CSV export
+      uses: some-natalie/ghas-to-csv@v2
+      env:
+          GITHUB_PAT: ${{ secrets.ATOKEN }}  # you need to set a PAT
+    - name: Upload CSV
+      uses: actions/upload-artifact@v3
       with:
-          path: data/stats.csv
+          name: ghas-data
+          path: ${{ github.workspace }}/*.csv
+          if-no-files-found: error
 
 
  
