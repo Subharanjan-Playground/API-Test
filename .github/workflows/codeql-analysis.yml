@@ -80,20 +80,19 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      
+    - name: checkout main branch
+      uses: actions/checkout@v2
+    - uses: gr2m/write-csv-file-action@v1.x
+      with:
+          path: data/stats.csv
+          columns: Column 1, Column 2, etc
+          "Column 1": 1
+          "Column 2": 2
+          etc: 3
 
  
 
 
-    - uses: actions/checkout@v2
-
-    - uses: zbazztian/ghas-reports-action@v3.6
-      with:
-          token: ${{ secrets.ATOKEN }}
-          repo: 'Microsoft-Bootcamp/attendee-subharanjan2055'
-          # optionally define repo (default is calling repo)
-
-    - uses: actions/upload-artifact@v2
-      with:
-          name: results
-          path: alerts.xlsx     
+    
    
