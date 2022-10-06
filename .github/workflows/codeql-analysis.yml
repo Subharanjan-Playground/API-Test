@@ -90,7 +90,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: ghas-data
-          path: /home/runner/work/attendee-subharanjan2055/results/${{ matrix.language }}.csv
+          path: ${{ github.workspace }}/*.csv
           if-no-files-found: error
 
 
