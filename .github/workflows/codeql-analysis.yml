@@ -85,7 +85,7 @@ jobs:
     - name: CSV export
       uses: Subharanjan-Canaryss/ghas-to-csv@main
       env:
-          GITHUB_PAT: ${{ secrets.ATOKEN }}
+          GITHUB_PAT: ${{ secrets.PAT }}
     - name: Upload CSV
       uses: actions/upload-artifact@v3
       with:
