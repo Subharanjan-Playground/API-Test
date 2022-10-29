@@ -71,10 +71,15 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
       
-    - uses: mr-sherman/sarif-to-csv-action@v2
+      
+      
+    - name: SARIF-to-CSV
+      uses: mr-sherman/sarif-to-csv@v2.0.2
       with:
-        input-file: 'results.sarif'
+        
         output-file: 'results.csv'
+
+
 
 
     
