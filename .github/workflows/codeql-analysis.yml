@@ -74,7 +74,7 @@ jobs:
       
       
     - name: SARIF-to-CSV
-      uses: mr-sherman/sarif-to-csv@v2.0.2
+      uses: mr-sherman/sarif-to-csv@v2.1
       with:
         input-file: "/home/runner/work/attendee-subharanjan2055/results/${{ matrix.language }}.sarif"
         output-file: "/home/runner/work/attendee-subharanjan2055/results/${{ matrix.language }}.csv"
