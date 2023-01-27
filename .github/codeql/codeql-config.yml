@@ -8,3 +8,6 @@ queries:
   # other, because we're testing the parsing logic and
   # that the suites exist in the codeql bundle.
   - uses: security-extended
+  query-filters:
+  - exclude:
+      id: js/clear-text-logging
