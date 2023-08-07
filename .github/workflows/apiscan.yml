@@ -1,4 +1,4 @@
-name: "api-scan" 
+name: "api-scann" 
 on: [push]
 jobs:
   zap_scan:
