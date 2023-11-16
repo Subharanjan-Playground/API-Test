@@ -1,4 +1,4 @@
-name: Build Sonarqube
+name: Build Sonarqubee
 on:
   push:
     branches:
